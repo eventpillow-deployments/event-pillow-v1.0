@@ -1,13 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class', '[data-theme="dark"]'],
-  purge: {
-    enabled: true,
-    content: ['./src/**/*.tsx'],
-    options: {
-      safelist: ['dark'], //specific classes
-    },
-  },
   content: [
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
@@ -16,6 +9,7 @@ module.exports = {
       'animation': {
         'gradient-x':'gradient-x 8s ease infinite',
         'moon':'moon 2s linear infinite',
+        'sun':'sun 5s linear infinite'
       },
       'keyframes': {
         'gradient-x': {
@@ -35,6 +29,11 @@ module.exports = {
           },
           '100%': {
               'transform': 'rotate(0deg)',
+          }
+        },
+        'sun': {
+          '100%': {
+              'transform': 'rotate(1turn)',
           }
         }
       }
