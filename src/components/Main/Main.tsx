@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const includedFeatures = [
     'Manage Events',
     'Get Hired',
@@ -13,9 +15,9 @@ const Main = () => {
             <div className="flex justify-center mb-8">
               <div className="flex rounded-full flex-col sm:flex-row py-1 px-3 text-sm leading-6 dark:text-slate-300 text-slate-900 sm:ring-1 sm:ring-gray-400/50 sm:hover:ring-gray-400/80">
                 <span>By a Photographer for Photographers.</span>{' '}
-                <a className="font-semibold text-sky-500 pl-1 flex justify-center mt-0.25">
+                <Link href="/about" className="font-semibold text-sky-500 pl-1 flex justify-center mt-0.25">
                   Read more &rarr;
-                </a>
+                </Link>
               </div>
             </div>
             <div className="text-center">
@@ -40,11 +42,11 @@ const Main = () => {
                   href="#"
                   className="rounded-md bg-sky-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 via-purple-500 hover:from-blue-600 hover:to-cyan-400 animate-gradient-x"
                 >
-                  Create Your Profile
+                  Join Waitlist
                 </a>
-                <a href="#" className="text-base font-semibold leading-7 dark:text-slate-50 text-slate-900">
+                <Link href="/about" className="text-base font-semibold leading-7 dark:text-slate-50 text-slate-900">
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
