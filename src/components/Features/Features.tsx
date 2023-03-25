@@ -16,7 +16,7 @@ const Features = () => {
                     <p className="mt-1">Search, connect and hire professional freelancers, manage schedule and keep a track on the progress of events. </p>
                     <div className="mt-6 sm:mt-auto flex items-center justify-between gap-x-6">
                         <a
-                            href="#"
+                            href="#join-waitlist"
                             className="rounded-md bg-sky-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 via-purple-500 hover:from-blue-600 hover:to-cyan-400 animate-gradient-x"
                         >
                             Join Waitlist →
