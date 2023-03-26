@@ -1,4 +1,4 @@
-import InputBox from "./InputBox";
+import { ChangeEvent, FormEvent, useState } from "react";
 import SelectOne from "./SelectOne";
 
 const userTypes = [{
@@ -12,7 +12,56 @@ const userTypes = [{
     value: 'Visitor' 
 }];
 
+const formData = {
+    type: {
+        text: 'Freelancer',
+        err: false
+    },
+    specialisation: {
+        text: '',
+        err: true
+    },
+    city: {
+        text: '',
+        err: true
+    },
+    name: {
+        text: '',
+        err: true
+    },
+    phone: {
+        text: '',
+        err: true
+    },
+    email: {
+        text: '',
+        err: true
+    },
+};
+
 const WaitlistForm = () => {
+    const [waitListFormData, updateWaitListFormData] = useState(formData);
+
+    const changeValue = (e: ChangeEvent<HTMLInputElement>) => {
+        updateWaitListFormData(prevFormData => ({
+            ...prevFormData,
+            [e.target.id]: {
+                text: e.target.value,
+                err: !e.target.value,
+            } 
+        }))
+    }
+
+    const changeUserType = (val: string) => {
+        updateWaitListFormData(prevFormData => ({
+            ...prevFormData,
+            type: {
+                text: val,
+                err: !val,
+            } 
+        }))
+    }
+
     return (
         <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32" id="join-waitlist">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -22,79 +71,89 @@ const WaitlistForm = () => {
                         <p className="mt-4 text-lg leading-8 dark:text-gray-300 text-slate-700">
                             The only tool you'll ever need, to get work or get work done. No Fuss.
                         </p>
-                        <div className="mt-6 flex max-w-md gap-y-2 flex-col max-sm:items-stretch">
-                            <SelectOne title="You are a?" options={userTypes} name="type" defaultValue="Freelancer"/>
-                        </div>
-                        <div className="mt-4 flex flex-row max-w-md gap-4 max-sm:flex-col">
-                            <label htmlFor="specialisation" className="sr-only">
-                                Specialisation
-                            </label> 
-                            <input
-                                id="specialisation"
-                                name="specialisation"
-                                type="text"
-                                required
-                                className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
-                                placeholder="Enter your specialisation"
-                            />
-                            <label htmlFor="city" className="sr-only">
-                                City
-                            </label>
-                            <input
-                                id="city"
-                                name="city"
-                                type="text"
-                                required
-                                className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
-                                placeholder="Enter your city"
-                            />
-                        </div>
-                        <div className="mt-4 flex flex-row max-w-md gap-4 max-sm:flex-col">
-                            <label htmlFor="name" className="sr-only">
-                                Name
-                            </label> 
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                autoComplete="name"
-                                required
-                                className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
-                                placeholder="Enter your name"
-                            />
-                            <label htmlFor="phone" className="sr-only">
-                                Phone Number
-                            </label>
-                            <input
-                                id="phone"
-                                name="phone"
-                                type="tel"
-                                autoComplete="tel"
-                                required
-                                className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
-                                placeholder="Enter your phone number"
-                            />
-                        </div>
-                        <div className="mt-4 flex max-w-md gap-x-4">
-                            <label htmlFor="email-address" className="sr-only">
-                                Email address
-                            </label>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
-                                placeholder="Enter your email"
-                            />
-                            <button
-                                type="submit"
-                                className="flex-none rounded-md bg-sky-500 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                            >
-                                Get Pillow
-                            </button>
-                        </div>
+                        <form className="launchlist-form" action="https://getlaunchlist.com/s/KzGjhP" method="POST">
+                            <div className="mt-6 flex max-w-md gap-y-2 flex-col max-sm:items-stretch">
+                                <SelectOne title="You are a?" options={userTypes} name="type" value={waitListFormData.type.text} onChange={changeUserType}/>
+                            </div>
+                            <div className="mt-4 flex flex-row max-w-md gap-4 max-sm:flex-col">
+                                <label htmlFor="specialisation" className="sr-only">
+                                    Specialisation
+                                </label> 
+                                <input
+                                    id="specialisation"
+                                    name="specialisation"
+                                    value={waitListFormData.specialisation.text}
+                                    onChange={changeValue}
+                                    className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                                    placeholder="Enter your specialisation"
+                                />
+                                <label htmlFor="city" className="sr-only">
+                                    City
+                                </label>
+                                <input
+                                    id="city"
+                                    name="city"
+                                    type="text"
+                                    value={waitListFormData.city.text}
+                                    onChange={changeValue}
+                                    required
+                                    className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                                    placeholder="Enter your city"
+                                />
+                            </div>
+                            <div className="mt-4 flex flex-row max-w-md gap-4 max-sm:flex-col">
+                                <label htmlFor="name" className="sr-only">
+                                    Name
+                                </label> 
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    autoComplete="name"
+                                    value={waitListFormData.name.text}
+                                    onChange={changeValue}
+                                    required
+                                    className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                                    placeholder="Enter your name"
+                                />
+                                <label htmlFor="phone" className="sr-only">
+                                    Phone Number
+                                </label>
+                                <input
+                                    id="phone"
+                                    value={waitListFormData.phone.text}
+                                    onChange={changeValue}
+                                    name="phone"
+                                    type="tel"
+                                    autoComplete="tel"
+                                    required
+                                    className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                                    placeholder="Enter your phone number"
+                                />
+                            </div>
+                            <div className="mt-4 flex max-w-md gap-x-4">
+                                <label htmlFor="email-address" className="sr-only">
+                                    Email address
+                                </label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    value={waitListFormData.email.text}
+                                    onChange={changeValue}
+                                    required
+                                    className="outline-sky-500 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-400 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                                    placeholder="Enter your email"
+                                />
+                                <input
+                                    type="submit"
+                                    disabled={Object.values(waitListFormData).find(item => item.err === true) !== undefined}
+                                    className={`disabled:bg-gray-500 disabled:cursor-not-allowed flex-none rounded-md bg-sky-500 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}
+                                    value="Join Waitlist"
+                                />
+                            </div>
+                        </form>
                     </div>
                     <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
                         <div className="flex flex-col items-start">
