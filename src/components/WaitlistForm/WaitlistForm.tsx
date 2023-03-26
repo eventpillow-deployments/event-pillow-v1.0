@@ -69,7 +69,7 @@ const WaitlistForm = () => {
                     <div className="max-w-xl lg:max-w-lg">
                         <h2 className="text-3xl font-bold tracking-tight dark:text-slate-50 text-slate-900 sm:text-4xl">Join the Waitlist Now!</h2>
                         <p className="mt-4 text-lg leading-8 dark:text-gray-300 text-slate-700">
-                            The only tool you'll ever need, to get work or get work done. No Fuss.
+                            The only tool you&apos;ll ever need, to get work or get work done. No Fuss.
                         </p>
                         <form className="launchlist-form" action="https://getlaunchlist.com/s/KzGjhP" method="POST">
                             <div className="mt-6 flex max-w-md gap-y-2 flex-col max-sm:items-stretch">
@@ -164,7 +164,7 @@ const WaitlistForm = () => {
                             </div>
                             <dt className="mt-4 font-semibold dark:text-slate-50 text-slate-900">3 Months Free</dt>
                             <dd className="mt-2 leading-7 dark:text-gray-400 text-slate-900">
-                                First 100 waiters receive a 3 month premium membership and support. We'll work closely with you to make sure your experience is seamless.
+                                First 100 waiters receive a 3 month premium membership and support. We&apos;ll work closely with you to make sure your experience is seamless.
                             </dd>
                         </div>
                         <div className="flex flex-col items-start">
@@ -175,7 +175,7 @@ const WaitlistForm = () => {
                             </div>
                             <dt className="mt-4 font-semibold dark:text-slate-50 text-slate-900">No spam</dt>
                             <dd className="mt-2 leading-7 dark:text-gray-400 text-slate-900">
-                                We will never spam you with unnecessary emails or calls. We value your time, the way you value yours. That's our promise.
+                                We will never spam you with unnecessary emails or calls. We value your time, the way you value yours. That&apos;s our promise.
                             </dd>
                         </div>
                         <div className="flex flex-col items-start">

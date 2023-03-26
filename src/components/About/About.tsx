@@ -6,14 +6,14 @@ const About = () => {
                 <img className="sm:row-span-2" src="https://i.ibb.co/xjbR8M1/Whats-App-Image-2023-02-26-at-3-43-59-PM.jpg" alt="" />
                 <div className="">
                     <div className="text-xl tracking-tight mb-6 text-gray-500 dark:text-gray-400">The Short</div>
-                    <p className="text-base mb-6 sm:mb-8 sm:w-10/12 dark:text-slate-300 text-slate-900">Hailing from a family of professional photographers and nomads, and being a solo traveller cum photograher for over half a decade. I felt the need for a tool that centralizes and solves all the issues that I've ever encountered. As a result <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">EventPillow</span> was born.</p>
+                    <p className="text-base mb-6 sm:mb-8 sm:w-10/12 dark:text-slate-300 text-slate-900">Hailing from a family of professional photographers and nomads, and being a solo traveller cum photograher for over half a decade. I felt the need for a tool that centralizes and solves all the issues that I&apos;ve ever encountered. As a result <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">EventPillow</span> was born.</p>
                     <img className="sm:row-span-2" src="https://i.ibb.co/xjbR8M1/Whats-App-Image-2023-02-26-at-3-43-59-PM.jpg" alt="" />
                 </div>
                 <div className="text-base">
                     <div className="text-xl tracking-tight mb-6 text-gray-500 dark:text-gray-400">The Long</div>
                     <div className="text-base sm:w-10/12 dark:text-slate-300 text-slate-900">
                         <p className="mb-4">We believe that the process of getting a gig, hiring a reliable person and managing events is tedious, overly complicated and time consuming.</p>
-                        <p className="mb-4">We're building a home for photographers, no matter what your day looks like we want to make it easier for
+                        <p className="mb-4">We&apos;re building a home for photographers, no matter what your day looks like we want to make it easier for
                             you to get hired or hire a photographer, manage your tasks or events, be clear about your availability,
                             build a personal brand, manage payments and everything a photograher or studio will ever need.
                         </p>

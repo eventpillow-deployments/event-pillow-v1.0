@@ -23,7 +23,7 @@ const people = [
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 sm:text-4xl">Meet our team</h2>
             <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-400">
-              We're photography and tech enhusiasts, and a team in progress, passionate about what we do.
+              We&apos;re photography and tech enhusiasts, and a team in progress, passionate about what we do.
             </p>
           </div>
           <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
