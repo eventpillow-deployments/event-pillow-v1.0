@@ -1,5 +1,8 @@
 import Link from "next/link";
-import DarkMode from "../DarkMode/DarkMode";
+import dynamic from "next/dynamic";
+
+const DarkMode = dynamic(() => import("../DarkMode/DarkMode"), {ssr: false})
+
 
 const NavBar = () => {
     return (
