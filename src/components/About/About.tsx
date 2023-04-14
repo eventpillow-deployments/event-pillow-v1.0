@@ -61,7 +61,7 @@ const About = () => {
                     <div className="flex flex-col gap-y-3 mt-4">
                         <Link className="flex gap-x-2 dark:text-slate-300 text-slate-900" href="https://www.linkedin.com/in/sahilkazi01/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" stroke-linecap="round" stroke-linejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                            <p>Sahil (Founding Engineer)</p>
+                            <p>Sahil (Co-founder)</p>
                         </Link>
                         <Link className="flex gap-x-2 dark:text-slate-300 text-slate-900" href="https://www.linkedin.com/in/sahilkazi01/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" stroke-linecap="round" stroke-linejoin="round" className="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
