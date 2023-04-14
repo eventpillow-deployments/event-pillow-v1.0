@@ -18,7 +18,7 @@ export default function Home() {
         <meta property="og:description" content="Connect with production houses, get hired as an artist and manage your events all from one place." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.eventpillow.com" />
-        <meta name="image" property="og:image" content="https://i.ibb.co/fNsMMMP/Screenshot-2023-03-31-at-9-12-43-PM.png" />
+        <meta name="image" property="og:image" content="https://ik.imagekit.io/cqught041/EP-Main-Website/SEO/OG_IMAGE.png?updatedAt=1681490051114" />
       </Head>
       <Header />
       <Main />
