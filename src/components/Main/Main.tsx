@@ -25,18 +25,26 @@ const Main = () => {
 
   return (
     <main>
-      <div className="relative px-6 lg:px-8 min-h-full">
-        <div className="mx-auto max-w-2xl py-20 sm:py-48 lg:py-16">
+      <div className="relative px-6 lg:px-8 min-h-screen flex justify-center items-center scroll-smooth">
+        <div className="mx-auto max-w-2xl ">
           <div className="flex justify-center mb-8">
-            {/* <div className="flex rounded-full flex-col sm:flex-row py-1 px-3 text-sm leading-6 dark:text-slate-300 text-slate-900 sm:ring-1 sm:ring-gray-400/50 sm:hover:ring-gray-400/80">
+            <div className="flex rounded-full items-center flex-row py-1 px-3 text-sm leading-6 dark:text-slate-300 text-slate-900 ring-1 ring-gray-400/50 hover:ring-gray-400/80 whitespace-nowrap">
               <span>By a Photographer for Photographers.</span>{" "}
               <Link
                 href="/about"
-                className="font-semibold text-sky-500 pl-1 flex justify-center mt-0.25"
+                className="font-semibold text-sky-500 pl-2 flex justify-center"
               >
-                Read more &rarr;
+                <div className="group text-gray-200 hover:text-sky-600 transition ease-in-out duration-200 text-base">
+                  Read more{" "}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform ease-in-out duration-200"
+                  >
+                    →
+                  </span>
+                </div>
               </Link>
-            </div> */}
+            </div>
           </div>
           <div className="text-center">
             <div className="flex justify-center">
@@ -44,24 +52,24 @@ const Main = () => {
                 No more
               </h1>
               <div className="whitespace-nowrap h-[4rem] w-max ml-2 ">
-                <p className="text-5xl h-full pl-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-extrabold animate-typing overflow-hidden whitespace-nowrap">
+                <p className="text-4xl sm:text-5xl h-full pl-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-extrabold animate-typing overflow-hidden whitespace-nowrap">
                   {typewriterTexts[typewriterIndex]}
                 </p>
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight dark:text-slate-50 text-slate-900 sm:text-5xl">
-              Get ready to
+              Now easily
             </h1>
             <ul
               role="list"
-              className="my-10 grid gap-10 leading-6 dark:text-slate-50 text-slate-900 justify-center grid-cols-2"
+              className="my-10 grid gap-4 sm:gap-10 leading-6 dark:text-slate-50 text-slate-900 justify-center grid-cols-2"
             >
               {includedFeatures.map((feature) => (
                 <li
                   key={feature}
-                  className="rounded-lg mx-8 py-4 dark:bg-opacity-10 dark:bg-gray-700 bg-sky-300 bg-opacity-10 border border-gray-500 border-opacity-70 sm:col-span-1"
+                  className="rounded-lg py-4 dark:bg-opacity-10 dark:bg-gray-700 bg-sky-300 bg-opacity-10 border border-gray-500 border-opacity-70 sm:col-span-1"
                 >
-                  <h4 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 w-50">
+                  <h4 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 w-50">
                     {feature}
                   </h4>
                 </li>
@@ -70,7 +78,7 @@ const Main = () => {
             <h1 className="text-4xl font-bold tracking-tight dark:text-slate-50 text-slate-900 sm:text-5xl">
               Only on EventPillow
             </h1>
-            <div className="relative my-8">
+            {/* <div className="relative my-8">
               <input
                 type="text"
                 className=" h-16 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 pl-4 pr-48 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-xl focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
@@ -81,8 +89,16 @@ const Main = () => {
                   Join the waitlist
                 </span>
               </div>
-            </div>
+            </div> */}
             <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="#join-waitlist"
+                className="group [transform:translateZ(0)] px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-purple-500 overflow-hidden before:absolute before:bg-gradient-to-r before:from-blue-600 before:to-cyan-400 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-[100%_100%] before:scale-x-0 hover:before:origin-[0_0] hover:before:scale-x-100 before:transition before:ease-in-out before:duration-500 cursor-pointer"
+              >
+                <span className="relative z-0 text-gray-200 transition ease-in-out duration-500 font-semibold text-lg ">
+                  Join the waitlist
+                </span>
+              </a>
               <Link
                 href="/about"
                 className="text-base font-semibold leading-7 dark:text-slate-50 text-slate-900"
