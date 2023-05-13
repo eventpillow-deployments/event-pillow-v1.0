@@ -26,7 +26,7 @@ const DarkMode = () => {
             icon = <Light onClick={toggleTheme}  styles="h-5 w-5 text-zinc-600 cursor-pointer hover:animate-moon"/>
             break
         default:
-            icon = null
+            icon = <Dark onClick={toggleTheme}  styles="h-6 w-6 text-zinc-400 cursor-pointer hover:animate-sun hover:text-yellow-500"/>
             break
       }
     
