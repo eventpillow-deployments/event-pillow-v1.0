@@ -63,7 +63,7 @@ const WaitlistForm = () => {
     }
 
     return (
-        <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32" id="join-waitlist">
+        <div className="relative isolate overflow-hidden py-8 sm:py-24 lg:py-32" id="join-waitlist">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-2">
                     <div className="max-w-xl lg:max-w-lg">

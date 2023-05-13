@@ -10,7 +10,7 @@ const DarkMode = () => {
 
     let icon;
     
-    const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
+    const toggleTheme = () => setTheme(theme === 'dark' || !theme ? 'light' : 'dark');
 
     useEffect(() => {
         setMounted(true)
