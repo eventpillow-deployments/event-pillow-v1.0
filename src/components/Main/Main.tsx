@@ -11,7 +11,7 @@ const Main = () => {
     return (
     <main>
         <div className="relative px-6 lg:px-8 min-h-full">
-          <div className="mx-auto max-w-2xl py-20 sm:py-48 lg:py-56">
+          <div className="mx-auto max-w-2xl py-20 sm:py-48 lg:py-56 min-h-screen -mt-24 flex flex-col justify-center">
             <div className="flex justify-center mb-8">
               <div className="flex rounded-full flex-col sm:flex-row py-1 px-3 text-sm leading-6 dark:text-slate-300 text-slate-900 sm:ring-1 sm:ring-gray-400/50 sm:hover:ring-gray-400/80">
                 <span>By a Photographer for Photographers.</span>{' '}
