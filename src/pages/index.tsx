@@ -20,7 +20,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.eventpillow.com" />
         <meta name="image" property="og:image" content="https://ik.imagekit.io/cqught041/EP-Main-Website/SEO/OG_IMAGE.png?updatedAt=1681490051114" />
       </Head>
-      <Header />
+      {/* <Header /> */}
       <Main />
       <Features />
       <WaitlistForm />
