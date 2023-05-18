@@ -14,17 +14,19 @@ import Header from '@/components/Header/Header';
 import { useRouter } from 'next/router';
 
 const protectedRoutes = ['/settings', '/builder'];
+const authRoutes = ['/signin', '/signup']
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const { pathname } = router;
+  const { pathname, asPath } = router;
   const isProtectedRoute = protectedRoutes.includes(pathname);
+  const isAuthRoute = authRoutes.includes(asPath);
 
   return (
     <ClerkProvider>
       <ThemeProvider>
         <Script src="https://getlaunchlist.com/js/widget-diy.js" defer />
         <>
-          <Header />
+          {!isAuthRoute && <Header />}
           {isProtectedRoute ? (
             <>
               <SignedIn>

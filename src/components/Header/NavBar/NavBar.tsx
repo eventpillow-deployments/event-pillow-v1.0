@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import DarkMode from '../DarkMode/DarkMode';
-import { UserButton, SignedIn, SignedOut, useUser } from '@clerk/clerk-react';
+import { UserButton, SignedIn, SignedOut, useUser } from '@clerk/nextjs';
 
 const NavBar = () => {
 
