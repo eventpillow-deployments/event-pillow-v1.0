@@ -28,6 +28,9 @@ const NavBar = () => {
                 userButtonAvatarBox: 'w-12 h-12 rounded-full hover:bg-red-500',
               },
             }}
+            afterSignOutUrl='/'
+            userProfileMode='navigation'
+            userProfileUrl='/settings'
           />
         ) : (
           <div className="ml-8">
