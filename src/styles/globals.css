@@ -75,6 +75,9 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
+  .cl-internal-1srb8ax{
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
 }
 
 * {
